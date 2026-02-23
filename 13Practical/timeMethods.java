@@ -91,7 +91,7 @@ public class timeMethods {
         }
         return -1;
     }
-
+    //method for file reading
     static String[] readFileToArray(String filename) throws Exception {
 
         ArrayList<String> lines = new ArrayList<>();
