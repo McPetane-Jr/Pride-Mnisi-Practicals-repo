@@ -8,7 +8,7 @@ public class timeMethods {
 
     public static int N = 0;   // you can set this later
 
-    public static void main(String args[]) {
+    public static void main(String args[]) throws Exception {
 
         DecimalFormat twoD = new DecimalFormat("0.00");
         DecimalFormat fourD = new DecimalFormat("0.0000");
@@ -24,6 +24,13 @@ public class timeMethods {
 
         Random randGen = new Random();
 
+        String[] bookArr = readFileToArray("C:\\Users\\Mcpet\\IdeaProjects\\13Practical\\src\\ulysses.numbered");
+
+        for (String line : bookArr)
+        {
+            System.out.println(line);
+        }
+
         for (repetition = 0; repetition < repetitions; repetition++) {
 
             start = System.currentTimeMillis();
@@ -31,8 +38,8 @@ public class timeMethods {
             int rand = randGen.nextInt(0, 32654);
 
             // call the procedures to time here:
-            linearSearch();
-            binarySearch();
+//            linearSearch();
+//            binarySearch();
 
             finish = System.currentTimeMillis();
 
@@ -91,7 +98,7 @@ public class timeMethods {
         }
         return -1;
     }
-    //method for file reading
+
     static String[] readFileToArray(String filename) throws Exception {
 
         ArrayList<String> lines = new ArrayList<>();
