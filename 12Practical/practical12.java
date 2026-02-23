@@ -8,8 +8,6 @@ public class practical12 {
         System.out.println("mcsOn2B: " + mcsOn2B(X));
         System.out.println("mcsOn: " + mcsOn(X));
         
-
-        
     }
 
 
