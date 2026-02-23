@@ -1,4 +1,14 @@
 public class practicsl13 {
+
+    static class Node {
+        int key;
+        String value;
+
+        public Node(int key, String value) {
+            this.key = key;
+            this.value = value;
+        }
+    }
     public static void main(String[] args) {
         // code to read the data from ulysses.numbered and perform the linear and binary search
     }
@@ -31,5 +41,9 @@ public class practicsl13 {
         }
         return -1; 
     }
+
+    
+
+    
    
 }
