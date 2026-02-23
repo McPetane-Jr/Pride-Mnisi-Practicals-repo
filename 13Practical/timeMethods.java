@@ -1,6 +1,8 @@
 import java.lang.Math;
 import java.io.*;
-import java.text.DecimalFormat; 
+import java.text.DecimalFormat;
+import java.util.Random;
+import java.util.*;
 
 public class timeMethods {
 
@@ -20,13 +22,17 @@ public class timeMethods {
 
         runTime = 0;
 
+        Random randGen = new Random();
+
         for (repetition = 0; repetition < repetitions; repetition++) {
 
             start = System.currentTimeMillis();
 
+            int rand = randGen.nextInt(0, 32654);
+
             // call the procedures to time here:
-            // linearsearch(...);
-            // binarysearch(...);
+            linearSearch();
+            binarySearch();
 
             finish = System.currentTimeMillis();
 
@@ -39,7 +45,7 @@ public class timeMethods {
 
         double stdDeviation =
                 Math.sqrt(runTime2 - repetitions * aveRuntime * aveRuntime)
-                / (repetitions - 1);
+                        / (repetitions - 1);
 
         System.out.printf("\n\nStatistics\n");
         System.out.println("________________________________________________");
@@ -61,29 +67,47 @@ public class timeMethods {
     public static int linearSearch(int[] arr, int key) {
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] == key) {
-                return i; 
+                return i;
             }
         }
-        return -1; 
+        return -1;
     }
 
     // Binary search method
     public static int binarySearch(int[] arr, int key) {
         int left = 0;
         int right = arr.length - 1;
-        
+
         while (left <= right) {
             int mid = (left + (right - left)) / 2;
-            
+
             if (arr[mid] == key) {
-                return mid; 
+                return mid;
             } else if (arr[mid] < key) {
-                left = mid + 1; 
+                left = mid + 1;
             } else {
-                right = mid - 1; 
+                right = mid - 1;
             }
         }
-        return -1; 
+        return -1;
+    }
+
+    static String[] readFileToArray(String filename) throws Exception {
+
+        ArrayList<String> lines = new ArrayList<>();
+
+        BufferedReader reader = new BufferedReader(new FileReader(filename));
+
+        String line;
+
+        while ((line = reader.readLine()) != null) {
+            lines.add(line);
+        }
+
+        reader.close();
+
+        String[] arrayOfLines = lines.toArray(new String[0]);
+        return arrayOfLines;
     }
 
 }
