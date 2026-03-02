@@ -20,6 +20,20 @@ public class openHash {
         private int m; // Size of the hash table
         private int size; // Number of key-value pairs in the hash table
 
-        pu
+        public openHash(int m){
+
+            this.m = m;
+
+            this.table = new Node[m + 1]; 
+            this.size = 0;
+        }
+
+        private int hash(String key) {
+            int hashValue = Math.abs(key.hashCode());
+            return (hashValue % m) + 1;   
+        }
+
+        
+            
     }
 }
