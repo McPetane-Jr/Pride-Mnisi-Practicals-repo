@@ -11,7 +11,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.List;
 
-public class timeMethods{
+public class Hashing {
 
     public static int N = 1<<20; //This is 2^20, which is 1,048,576. You can set this to a different value as needed.
     
