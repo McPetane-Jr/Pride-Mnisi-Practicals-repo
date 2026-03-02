@@ -50,15 +50,17 @@ public class timeMethods{
             String value = String.valueOf(i + 1); // converted the index (numbered from 1 to N) to String
             nodeArr[i] = new Node(key, value); // Create a new Node with the key and value and store it in the array
         }
-    }
-        
-    // Linear Search for Key
-    
 
-    // Binary Search for Key
-   
+        //Now you have an array of N key-value pairs, where the keys are the shuffled integers (as Strings) and the values are the corresponding numbered Strings.
+        openHash hashTable = new openHash(N); // Create an instance of the openHash class with size N
+
+        // Insert all key-value pairs into the hash table
+        for (int i = 0; i < N; i++) {
+            hashTable.insert(nodeArr[i].key, nodeArr[i].value);
+        }
+
         
-    // Read file and create a Node Array
+    }
     
 
 }
