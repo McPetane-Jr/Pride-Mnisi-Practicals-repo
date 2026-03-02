@@ -13,7 +13,9 @@ public class timeMethods {
         DecimalFormat twoD = new DecimalFormat("0.00");
         DecimalFormat fourD = new DecimalFormat("0.0000");
         DecimalFormat fiveD = new DecimalFormat("0.00000");
+  
 
+        
         long start, finish;
         double runTime = 0, runTime2 = 0, time;
         double totalTime = 0.0;
