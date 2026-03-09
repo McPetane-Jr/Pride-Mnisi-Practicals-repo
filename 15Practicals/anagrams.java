@@ -1,30 +1,22 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.io.PrintWriter;
+import java.util.*;
 
 //package 15Practicals;
 
 public class anagrams {
 
-    public List<List<String>> groupAnagrams(String[] strs){
-
+    public Map<String, List<String>> groupAnagrams(String[] strs) {
         Map<String, List<String>> anagramGroups = new HashMap<>();
-
-        for (String s: strs) {
+        for (String s : strs) {
             char[] chars = s.toCharArray();
             Arrays.sort(chars);
-            String keys = new String(chars);
-            //This line checks if the key already exists in the map.
-            //If it does, it adds the string to the existing list.
-            //If it doesn't, it creates a new list and adds the string to it.
-            anagramGroups.computeIfAbsent(keys, k -> new ArrayList<>()).add(s);
+            String key = new String(chars);
+            anagramGroups.computeIfAbsent(key, k -> new ArrayList<>()).add(s);
         }
-        return new ArrayList<>(anagramGroups.values());
+        return anagramGroups;
     }
 
     //This method reads the file and returns an array of words
@@ -63,17 +55,59 @@ public class anagrams {
         return words.toArray(new String[0]);
     }
 
+
+    public static List<List<String>> sortAnagramGroups(Map<String, List<String>> map) {
+
+        List<List<String>> groups = new ArrayList<>(map.values());
+
+        groups.sort((a, b) -> a.get(0).compareTo(b.get(0)));
+
+        return groups;
+    }
+
+    public static void writeLatexFile(List<List<String>> groups) {
+
+        try {
+
+            PrintWriter writer = new PrintWriter("theAnagrams.tex");
+
+            for (List<String> group : groups) {
+
+                if (group.size() > 1) {
+
+                    Collections.sort(group);
+
+                    writer.println(String.join(", ", group) + "\\\\");
+                }
+
+            }
+
+            writer.close();
+
+        } catch (IOException e) {
+
+            System.out.println("Error writing LaTeX file.");
+
+        }
+    }
     public static void main(String[] args) throws Exception {
 
         String[] words = readWordsFromFile("joyce1992_ulysses.txt");
 
         anagrams obj = new anagrams();
 
-        List<List<String>> anagramGroups = obj.groupAnagrams(words);
-        for (String w : words) System.out.println(w);
+        //List<List<String>> anagramGroups = obj.groupAnagrams(words);
+        //for (String w : words) System.out.println(w);
         //writeLatex(anagrams, "theAnagrams.tex");
 
-        System.out.println("Done!");
+        //System.out.println(anagramGroups);
+        Map<String, List<String>> anagramMap = obj.groupAnagrams(words);
+        List<List<String>> sortedGroups = sortAnagramGroups(anagramMap);
+        //System.out.println(sortedGroups);
+
+        writeLatexFile(sortedGroups);
+
+
     }
 
 }
