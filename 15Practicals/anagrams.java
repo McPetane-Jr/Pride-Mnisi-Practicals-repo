@@ -19,7 +19,7 @@ public class anagrams {
             char[] chars = s.toCharArray();
             Arrays.sort(chars);
             String keys = new String(chars);
-            //This line checks if the key already exists in the map. 
+            //This line checks if the key already exists in the map.
             //If it does, it adds the string to the existing list.
             //If it doesn't, it creates a new list and adds the string to it.
             anagramGroups.computeIfAbsent(keys, k -> new ArrayList<>()).add(s);
@@ -29,11 +29,11 @@ public class anagrams {
 
     //This method reads the file and returns an array of words
     public static String[] readWordsFromFile(String filename) throws IOException {
-        
+
         //For holding the words we read
         ArrayList<String> words = new ArrayList<>();
 
-        
+
         BufferedReader reader = new BufferedReader(new FileReader(filename));
         String line;
 
@@ -48,7 +48,7 @@ public class anagrams {
             //Split the line into words using whitespace as a delimiter
             String[] parts = line.split("\\s+");
 
-            //Add the words to our list 
+            //Add the words to our list
             // ignoring empty strings
             for (String word : parts) {
                 if (!word.isEmpty()) {
@@ -67,11 +67,13 @@ public class anagrams {
 
         String[] words = readWordsFromFile("joyce1992_ulysses.txt");
 
-        Map<String, List<String>> anagrams = groupAnagrams(words);
+        anagrams obj = new anagrams();
 
+        List<List<String>> anagramGroups = obj.groupAnagrams(words);
+        for (String w : words) System.out.println(w);
         //writeLatex(anagrams, "theAnagrams.tex");
 
         System.out.println("Done!");
     }
-    
+
 }
