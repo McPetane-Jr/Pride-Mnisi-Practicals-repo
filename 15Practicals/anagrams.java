@@ -90,6 +90,53 @@ public class anagrams {
 
         }
     }
+
+    // Removes duplicates from each anagram group
+    public static List<List<String>> removeDuplicates(List<List<String>> groups) {
+        List<List<String>> noDuplicates = new ArrayList<>();
+        for (List<String> group : groups) {
+            // Use LinkedHashSet to preserve insertion order
+            Set<String> unique = new LinkedHashSet<>(group);
+            noDuplicates.add(new ArrayList<>(unique));
+        }
+        return noDuplicates;
+    }
+
+    // Inserts anagrams into a LaTeX template and writes a new .tex file
+    public static void attachAnagramsToTemplate(List<List<String>> groups, String templateFile, String outputFile) {
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader(templateFile));
+            PrintWriter writer = new PrintWriter(outputFile);
+
+            String line;
+            while ((line = reader.readLine()) != null) {
+                if (line.contains("\\include{theAnagrams}")) {
+                    // Replace this line with your anagrams
+                    writer.println("% --- Begin Anagrams ---");
+                    writer.println("\\begin{itemize}");
+                    for (List<String> group : groups) {
+                        if (group.size() > 1) {
+                            Collections.sort(group); // Sort words alphabetically
+                            String joined = String.join(", ", group);
+                            writer.println("  \\item " + joined);
+                        }
+                    }
+                    writer.println("\\end{itemize}");
+                    writer.println("% --- End Anagrams ---");
+                } else {
+                    // Copy the line as-is
+                    writer.println(line);
+                }
+            }
+
+            reader.close();
+            writer.close();
+            System.out.println("New LaTeX file written to " + outputFile);
+        } catch (IOException e) {
+            System.out.println("Error processing LaTeX template: " + e.getMessage());
+        }
+    }
+
     public static void main(String[] args) throws Exception {
 
         String[] words = readWordsFromFile("joyce1992_ulysses.txt");
@@ -105,7 +152,12 @@ public class anagrams {
         List<List<String>> sortedGroups = sortAnagramGroups(anagramMap);
         //System.out.println(sortedGroups);
 
-        writeLatexFile(sortedGroups);
+
+        // Remove duplicates before writing to LaTeX
+        sortedGroups = removeDuplicates(sortedGroups);
+        // Attach anagrams to template
+        attachAnagramsToTemplate(sortedGroups, "anagrams.tex", "anagrams_with_content.tex");
+        //writeLatexFile(sortedGroups);
 
 
     }
