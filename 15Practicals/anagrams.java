@@ -156,7 +156,7 @@ public class anagrams {
         // Remove duplicates before writing to LaTeX
         sortedGroups = removeDuplicates(sortedGroups);
         // Attach anagrams to template
-        attachAnagramsToTemplate(sortedGroups, "anagrams.tex", "anagrams_with_content.tex");
+        attachAnagramsToTemplate(sortedGroups, "anagrams.tex", "anagrams_result.tex");
         //writeLatexFile(sortedGroups);
 
 
