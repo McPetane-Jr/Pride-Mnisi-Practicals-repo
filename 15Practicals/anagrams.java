@@ -1,3 +1,6 @@
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -24,17 +27,51 @@ public class anagrams {
         return new ArrayList<>(anagramGroups.values());
     }
 
-    public static void main(String[] args) {
+    //This method reads the file and returns an array of words
+    public static String[] readWordsFromFile(String filename) throws IOException {
+        
+        //For holding the words we read
+        ArrayList<String> words = new ArrayList<>();
 
-        String[] words = {"eat", "tea", "tan", "ate", "nat", "bat", "listen", "silent", "enlist"};
+        
+        BufferedReader reader = new BufferedReader(new FileReader(filename));
+        String line;
 
-        anagrams obj = new anagrams();
+        while ((line = reader.readLine()) != null) {
 
-        List<List<String>> result = obj.groupAnagrams(words);
+            // convert to lowercase
+            line = line.toLowerCase();
 
-        for (List<String> group : result) {
-            System.out.println(group);
+            // remove punctuation and replace with an empty string
+            line = line.replaceAll("[^a-z ]", "");
+
+            //Split the line into words using whitespace as a delimiter
+            String[] parts = line.split("\\s+");
+
+            //Add the words to our list 
+            // ignoring empty strings
+            for (String word : parts) {
+                if (!word.isEmpty()) {
+                    words.add(word);
+                }
+            }
         }
+
+        reader.close();
+
+        //Convert the list of words to an array and return it
+        return words.toArray(new String[0]);
+    }
+
+    public static void main(String[] args) throws Exception {
+
+        String[] words = readWordsFromFile("joyce1992_ulysses.txt");
+
+        Map<String, List<String>> anagrams = groupAnagrams(words);
+
+        //writeLatex(anagrams, "theAnagrams.tex");
+
+        System.out.println("Done!");
     }
     
 }
