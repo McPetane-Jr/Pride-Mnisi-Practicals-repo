@@ -60,7 +60,24 @@ public class tryHeapsort {
         heap[j] = temp;
     }
 
+    //Method to perform heapsort using the bottom-up heap
+    static String[] bottomUpHeapSort(String[] arr){
+
+        bottomUpHeap(arr); //building the heap using the bottom-up method
+
+        //Loop that removes the largest element (the root of the heap) and places it at the end of the array
+        for (int i = size - 1; i > 0; i--){
+            
+            swap(0, i); //swap the root of the heap with the last element
+            size--; //reduce the size of the heap by one
+            heapifyDown(0); //heapify down from the root to restore the heap property
+        }
+
+        return heap; //sorted
+    }
+
     
+
 
 
 
