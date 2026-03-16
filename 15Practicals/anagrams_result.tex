@@ -1,0 +1,1567 @@
+\documentclass[a4wide,11pt]{report}
+\usepackage{latexsym,graphics,amssymb}
+\usepackage[round]{natbib}
+\usepackage{listings}
+\usepackage{xcolor}
+
+\begin{document}
+\setlength{\hoffset}{0pt}
+\setlength{\voffset}{-60pt}
+\addtolength{\textwidth}{72pt}
+\addtolength{\textheight}{144pt}
+\author{
+\\*[+72pt]
+\Huge
+	Reg Dodds\\
+	\vspace{5pt}
+	{\small rdodds@uwc.ac.za}
+}
+\title{
+\fontsize{48pt}{56pt}
+\usefont{OT1}{ptm}{b}{n}
+\centering\color{blue} 
+The Anagrams in Ulysses, by James Joyce}
+\maketitle
+\newpage
+\noindent\copyright{2016} Copyright Reg Dodds.\\
+\newpage
+\renewcommand{\abstractname}{Foreword}
+\begin{abstract}
+This is a crudely produced list of the anagrams found in James Joyce's Ulysses,
+done to illustrate an application of hashing.
+\end{abstract}
+\thispagestyle{empty}
+\setcounter{page}{0}
+\mbox{\ \hspace{12pt}}
+\newpage
+
+\noindent 
+\twocolumn
+% --- Begin Anagrams ---
+\begin{itemize}
+  \item able, bale, elba
+  \item aboard, abroad
+  \item ac, ca
+  \item aches, chase
+  \item aconite, actione
+  \item ad, da
+  \item add, dad
+  \item adepts, pasted
+  \item adiutorium, auditorium
+  \item ae, ea
+  \item after, frate
+  \item ages, sage
+  \item agone, genoa
+  \item agree, eager
+  \item ah, ha
+  \item aid, dia
+  \item aim, ami
+  \item air, iar
+  \item ait, ita
+  \item albert, bartle
+  \item albino, albion
+  \item albs, slab
+  \item alien, linea
+  \item ailments, aliments
+  \item all, lal
+  \item aiulella, alleluia
+  \item allerta, lateral
+  \item almany, layman
+  \item almond, dolman
+  \item aloft, float
+  \item along, longa
+  \item altars, astral
+  \item altitude, latitude
+  \item am, ma
+  \item amber, bream
+  \item ambled, bedlam
+  \item amid, maid
+  \item among, mango
+  \item amor, omar
+  \item ample, maple, palme
+  \item an, na
+  \item and, dan
+  \item andrews, derwans
+  \item angel, angle, glean, nagle
+  \item angels, angles, nagles
+  \item anger, range
+  \item agnus, angus
+  \item annes, senan
+  \item anno, anon, onan
+  \item any, nay
+  \item ape, pea
+  \item apologies, apologise
+  \item apricots, piscator
+  \item arching, chagrin, charing
+  \item anchors, archons
+  \item ardenti, rendita, trained
+  \item are, ear, era
+  \item anear, arena
+  \item argent, garnet, garten
+  \item arm, ram
+  \item armagh, graham
+  \item armpits, imparts
+  \item arms, mars, rams
+  \item armstrap, ramparts
+  \item aroma, omara
+  \item arrest, rarest
+  \item arsing, grains
+  \item art, rat, tar
+  \item artists, straits
+  \item arts, rats, star, tars, tsar
+  \item as, sa
+  \item ascot, coast, coats
+  \item ashes, heass
+  \item aside, ideas
+  \item ass, sas
+  \item assert, asters, stares
+  \item at, ta
+  \item atoned, donate
+  \item atten, tante
+  \item attentive, tentative
+  \item auction, caution
+  \item aver, vear, vera
+  \item averred, everard
+  \item avail, avila
+  \item avon, nova
+  \item awed, wade, weda
+  \item awry, wary
+  \item axes, saxe
+  \item ay, ya
+  \item abba, baba
+  \item bad, dab
+  \item badge, begad
+  \item balfes, fables
+  \item bane, bean
+  \item bard, drab
+  \item bards, drabs
+  \item bare, bear
+  \item barely, barley
+  \item bast, bats, stab
+  \item bastile, bestial
+  \item battle, tablet
+  \item battles, tablets
+  \item be, eb
+  \item based, beads
+  \item beards, sabred
+  \item bares, bears
+  \item beat, beta
+  \item beast, beats
+  \item bed, deb
+  \item been, bene
+  \item beer, bere
+  \item begins, beings
+  \item behan, haben
+  \item begin, being
+  \item belial, liable
+  \item beest, beset
+  \item beshrew, hebrews
+  \item bids, dibs
+  \item beni, bien
+  \item big, gib
+  \item birth, brith
+  \item amble, blame, lambe, mabel
+  \item ambles, blames, lambes
+  \item blare, blear
+  \item blake, bleak
+  \item bleating, tangible
+  \item blot, bolt
+  \item blotted, bottled
+  \item blub, bulb
+  \item boar, roba
+  \item board, broad
+  \item boast, boats
+  \item body, boyd
+  \item bodys, boyds
+  \item bog, gob
+  \item bolster, lobster
+  \item bone, ebon, nebo
+  \item bono, boon
+  \item boer, bore, robe
+  \item bored, robed
+  \item boss, sobs
+  \item bowels, elbows
+  \item blow, bowl
+  \item blows, bowls
+  \item brady, darby
+  \item brain, brian
+  \item bairns, brains
+  \item bakers, brakes, breaks
+  \item bared, beard, bread
+  \item breadsoda, sodabread
+  \item brake, break
+  \item bertha, breath
+  \item bathers, breaths
+  \item brief, fibre
+  \item blisters, bristles
+  \item broth, throb
+  \item brush, shrub
+  \item brutes, buster, tubers
+  \item bruise, buries, rubies
+  \item burden, burned
+  \item but, tub
+  \item buttering, rebutting
+  \item busy, buys
+  \item cabs, scab
+  \item adc, cad
+  \item cadge, caged
+  \item calvary, cavalry
+  \item calve, clave
+  \item acme, came, mace
+  \item cameron, romance
+  \item canny, nancy
+  \item canon, conan
+  \item caoc, coca
+  \item cape, pace
+  \item arc, car
+  \item acre, care, race
+  \item caress, scares
+  \item carking, racking
+  \item calmer, carmel
+  \item carmen, carnem, cramen
+  \item cartoons, corantos
+  \item case, seca
+  \item acts, cast, cats
+  \item castile, elastic
+  \item actors, castor
+  \item casual, lacaus
+  \item act, cat
+  \item cause, sauce
+  \item cautioned, education
+  \item avec, cave
+  \item avarice, caviare
+  \item cared, cedar
+  \item cenar, crane
+  \item certo, recto
+  \item ceylon, cloyne
+  \item chants, snatch
+  \item charles, larches
+  \item charming, marching
+  \item cashed, chased
+  \item adhuc, chaud
+  \item cheap, peach
+  \item cheer, chree
+  \item chi, ich
+  \item chin, inch
+  \item chain, china
+  \item chains, chinas
+  \item chosen, cohens, noches
+  \item christian, christina
+  \item cigar, craig
+  \item circle, cleric
+  \item circles, clerics
+  \item cited, ticed
+  \item cist, cits
+  \item cackling, clacking
+  \item clanged, glanced
+  \item clans, lancs
+  \item claret, rectal
+  \item clean, lance
+  \item clare, clear
+  \item cleared, declare
+  \item clot, colt
+  \item coastline, sectional
+  \item cod, doc
+  \item codlings, scolding
+  \item cohen, enoch
+  \item coign, incog
+  \item coiled, docile
+  \item coins, scion
+  \item cloister, coistrel
+  \item clo, col
+  \item clod, cold
+  \item colum, locum
+  \item colums, slocum
+  \item compiled, complied
+  \item concent, connect
+  \item cones, scone
+  \item conserve, converse
+  \item conservation, conversation
+  \item consoles, coolness
+  \item carlo, coral
+  \item cordelia, cordiale
+  \item corps, crops
+  \item corpses, process
+  \item corpus, croups
+  \item corselet, electors
+  \item cost, cots
+  \item costs, scots
+  \item cloud, could
+  \item cours, scour
+  \item course, crusoe, source
+  \item courses, croesus
+  \item courtesan, nectarous
+  \item crags, scrag
+  \item caper, crape
+  \item cavern, craven
+  \item catering, creating
+  \item creation, reaction
+  \item creations, reactions
+  \item creator, reactor
+  \item centralised, credentials
+  \item credit, direct
+  \item cider, cried
+  \item crime, merci
+  \item crisp, scrip
+  \item crocus, occurs
+  \item censor, crones
+  \item cruel, lucre
+  \item cry, cyr
+  \item crude, cured
+  \item cruse, cures, curse
+  \item cruses, curses
+  \item cluster, cutlers
+  \item cyril, lyric
+  \item dagger, ragged
+  \item daily, lydia
+  \item dairy, diary
+  \item damned, demand, madden
+  \item ascend, dances
+  \item daniel, denial, nailed
+  \item ardent, darent
+  \item dander, darned
+  \item audibly, daubily
+  \item daw, wad
+  \item dawn, wand
+  \item dawson, sandow
+  \item de, ed
+  \item deaf, fade
+  \item dane, dean
+  \item deans, sedan
+  \item death, hated
+  \item deed, eded
+  \item deeply, yelped
+  \item dei, die, ide
+  \item delight, lighted
+  \item dealt, delta
+  \item demi, dime, medi
+  \item demon, monde
+  \item deo, doe
+  \item depart, parted
+  \item deposit, posited
+  \item deserts, dessert
+  \item deserve, severed
+  \item design, signed, singed
+  \item desire, reside
+  \item desired, resided
+  \item despot, posted
+  \item density, destiny
+  \item detest, tested
+  \item detour, toured
+  \item deduce, deuced, educed
+  \item di, id
+  \item dienen, dineen
+  \item dignam, mangid
+  \item dim, mid
+  \item dimple, limped
+  \item din, ind
+  \item dein, dine
+  \item diner, nidre
+  \item discreet, discrete
+  \item directions, discretion
+  \item disease, seaside
+  \item divers, drives
+  \item does, dose, odes
+  \item doll, lldo
+  \item dolor, drool
+  \item dome, edom, mode
+  \item admonition, domination
+  \item dolan, donal
+  \item dons, nods
+  \item dooooooooooog, goooooooooood
+  \item door, rood
+  \item doors, roods
+  \item adorn, doran, ronda
+  \item doings, dosing
+  \item dost, dots, tods
+  \item doyles, yodels
+  \item dr, rd
+  \item drain, nadir
+  \item drake, raked
+  \item draw, ward
+  \item backwards, drawbacks
+  \item drawer, reward, warder, warred
+  \item drawing, warding
+  \item draws, sward, wards
+  \item armed, darem, dream, madre
+  \item dresser, redress
+  \item birds, dribs
+  \item drier, rider
+  \item drove, roved
+  \item bud, dub
+  \item dubliners, unbridles
+  \item duets, usted
+  \item dun, und
+  \item dureth, hurted
+  \item durst, turds
+  \item dust, stud
+  \item dusty, study
+  \item dingy, dying
+  \item ache, each, haec
+  \item amuse, eamus
+  \item early, layer, leary
+  \item earnest, eastern, nearest
+  \item arse, ears
+  \item earthy, hearty
+  \item east, eats, esta, seat, teas
+  \item easter, eaters, teresa
+  \item ayes, easy
+  \item boyne, ebony
+  \item edges, sedge
+  \item editor, tierod
+  \item dye, edy
+  \item dyes, edys
+  \item eight, tighe
+  \item eis, ise
+  \item eke, kee
+  \item below, bowel, elbow
+  \item ellpodbomool, molldopeloob
+  \item eels, else, lees
+  \item elster, streel
+  \item emigrants, mastering, streaming
+  \item emirs, miser
+  \item den, end, ned
+  \item endow, owned
+  \item energy, greeny
+  \item english, shingle
+  \item ennis, nines
+  \item enquire, enrique
+  \item enter, entre
+  \item enters, resent
+  \item entire, entrie
+  \item entrails, latrines
+  \item envied, veined
+  \item epi, pie
+  \item epsom, poems
+  \item arent, erant
+  \item erin, rein, rien
+  \item erse, seer
+  \item es, se
+  \item esant, nates
+  \item coster, escort
+  \item esquire, queries
+  \item ess, ses
+  \item ethel, lethe
+  \item eve, vee
+  \item ever, veer, vere
+  \item except, expect
+  \item excepted, expected
+  \item cafe, face
+  \item cafes, faces
+  \item facilitate, laetificat
+  \item false, fleas
+  \item farst, farts
+  \item fate, feat
+  \item fare, fear
+  \item fears, safer
+  \item fates, feast
+  \item defeats, feasted
+  \item fealty, featly
+  \item feeling, fleeing
+  \item feels, flees
+  \item feet, fete
+  \item failer, ferial
+  \item fetor, forte
+  \item fait, fiat
+  \item field, filed
+  \item fein, fine
+  \item finger, fringe
+  \item fingers, fringes
+  \item fingals, finglas
+  \item fiendish, finished
+  \item first, rifts
+  \item fist, fits, sift
+  \item flesh, shelf
+  \item flog, golf
+  \item flow, fowl, wolf
+  \item flowing, wolfing
+  \item flo, fol
+  \item for, fro, rof
+  \item forests, fosters
+  \item former, reform
+  \item forth, froth
+  \item flair, frail
+  \item fratres, rafters
+  \item free, reef
+  \item freer, frere
+  \item freshest, freshets
+  \item fired, fried
+  \item finder, friend
+  \item form, from
+  \item flue, fuel
+  \item funeral, runefal
+  \item cigale, gaelic
+  \item gael, gale
+  \item gallery, largely
+  \item gan, nag
+  \item badger, garbed
+  \item danger, gander, garden, ranged
+  \item dangers, gardens
+  \item gave, vega
+  \item dargle, gerald, glared
+  \item geraniums, measuring
+  \item german, manger
+  \item gev, veg
+  \item ghoul, lough
+  \item giant, ignat
+  \item gilded, glided
+  \item ginger, nigger
+  \item engines, ginnees
+  \item clanging, glancing
+  \item go, og
+  \item dog, god
+  \item dogs, gods
+  \item egos, goes
+  \item bronzegold, goldbronze
+  \item golden, longed
+  \item goner, negro
+  \item gorman, morgan
+  \item gores, gorse
+  \item gort, grot
+  \item governors, grosvenor
+  \item gpi, pig
+  \item garb, grab
+  \item dearg, grade
+  \item agrin, grain
+  \item grained, reading
+  \item granite, tangier, tearing
+  \item granuaile, neuralgia
+  \item graize, grazie
+  \item grate, great
+  \item dring, grind
+  \item grudge, rugged
+  \item guests, gusset
+  \item gums, mugs
+  \item gouts, gusto
+  \item gust, guts, tugs
+  \item hairs, shira
+  \item hallows, shallow
+  \item halo, hola
+  \item halt, lath
+  \item daleth, halted
+  \item alnight, halting
+  \item ham, mah
+  \item anthem, hamnet
+  \item hams, sham
+  \item handel, handle
+  \item gnash, hangs
+  \item harms, marsh
+  \item ash, has
+  \item hash, shah
+  \item hasnt, shant
+  \item hasp, psha
+  \item haste, hates
+  \item hat, tha
+  \item hast, hats
+  \item hatter, threat
+  \item have, heva
+  \item haw, wha
+  \item eh, he
+  \item hare, hear
+  \item hearses, sheares
+  \item earth, hater, heart, rathe
+  \item earths, hearts
+  \item hate, heat
+  \item eighth, height
+  \item heir, hire
+  \item chenille, hellenic
+  \item herds, shred
+  \item heres, sheer
+  \item hesouls, shesoul
+  \item hide, hied
+  \item heights, highest
+  \item his, ihs
+  \item ashore, hoarse
+  \item homer, moher
+  \item hoo, oho
+  \item ephod, hoped
+  \item hops, shop
+  \item herods, hordes, horsed, rhodes
+  \item heron, horne
+  \item horse, shore
+  \item horses, shores
+  \item hoses, shoes
+  \item host, shot, thos
+  \item hegoats, hostage
+  \item hot, oth, tho
+  \item hotel, thole
+  \item horus, hours
+  \item how, who
+  \item however, whoever
+  \item huntress, hurtness
+  \item hurdle, hurled
+  \item hurt, ruth
+  \item delia, ideal
+  \item il, li
+  \item ill, lil
+  \item ilus, suil
+  \item im, mi
+  \item impression, permission
+  \item in, ni
+  \item inall, niall
+  \item inceptions, inspection
+  \item incests, insects
+  \item centurion, incruento
+  \item denied, indeed
+  \item fintan, infant
+  \item arming, ingram, margin
+  \item ink, kin
+  \item innings, sinning
+  \item hornies, inshore
+  \item incessant, instances
+  \item instead, sainted, stained
+  \item intend, tinned
+  \item insert, intres
+  \item invece, venice
+  \item darwin, inward
+  \item ireland, irlande
+  \item irelands, sireland
+  \item iron, noir
+  \item is, si
+  \item isnt, nist, tins
+  \item it, ti
+  \item italy, laity
+  \item dit, itd
+  \item its, sit, tis
+  \item ivers, rives, servi
+  \item jane, jean
+  \item jest, jets
+  \item greekjew, jewgreek
+  \item karma, makar
+  \item kay, yak
+  \item keen, knee
+  \item eykes, keyes
+  \item keys, skye
+  \item disk, kids
+  \item kills, skill
+  \item chink, kinch
+  \item keens, knees
+  \item kevins, knives
+  \item huk, kuh
+  \item al, la
+  \item bella, label
+  \item alec, lace
+  \item laces, scale
+  \item conical, laconic
+  \item ladies, sailed
+  \item daly, lady
+  \item dalys, ladys, sadly
+  \item dial, laid
+  \item lair, liar
+  \item lait, tail
+  \item kale, lake
+  \item balm, lamb
+  \item cleans, lances
+  \item lap, pal
+  \item laps, pals, slap
+  \item glare, lager, large, regal
+  \item karl, lark
+  \item larum, mural
+  \item last, salt
+  \item alert, alter, later
+  \item alther, halter, lather
+  \item awl, law, wal
+  \item lays, slay
+  \item el, le
+  \item dale, deal, lead, leda
+  \item dedale, leaded
+  \item dealers, leaders
+  \item aligned, dealing, leading
+  \item deals, leads
+  \item flea, leaf
+  \item hale, leah
+  \item akeled, leaked
+  \item lane, lean
+  \item lanes, leans
+  \item leaped, pealed
+  \item leaping, pealing
+  \item learnt, rental
+  \item del, led
+  \item leer, reel
+  \item leet, tlee
+  \item felt, left
+  \item galle, legal
+  \item lemon, melon
+  \item lenses, lessen
+  \item leo, ole
+  \item lest, lets
+  \item licensed, silenced
+  \item licks, slick
+  \item dil, ild, lid
+  \item lei, lie
+  \item isle, lies
+  \item file, life
+  \item files, flies, lifes, slife
+  \item iffley, liffey
+  \item flits, lifts
+  \item houselights, lighthouses
+  \item ilk, lik
+  \item lime, mile
+  \item line, nile
+  \item linear, nailer
+  \item inkling, linking
+  \item lino, lion, loin
+  \item lionmaned, mandoline
+  \item lips, lisp, slip
+  \item leinster, listener
+  \item leith, lithe
+  \item litt, tilt
+  \item liv, vil
+  \item evil, live, veil, vile
+  \item devil, lived
+  \item liver, livre
+  \item livery, verily
+  \item evils, lives, veils
+  \item dedalo, loaded
+  \item loaf, olaf
+  \item bole, lobe
+  \item boles, lobes
+  \item lodge, ogled
+  \item loftier, trefoil
+  \item lions, loins
+  \item looped, poodle
+  \item loops, pools
+  \item drol, lord
+  \item lose, sloe, sole
+  \item lost, lots, slot
+  \item lotus, louts
+  \item lovely, volley
+  \item low, owl
+  \item lower, rowel
+  \item lowers, slower
+  \item cauls, lacus, lucas
+  \item lump, plum
+  \item lumps, plums
+  \item lumpy, plumy
+  \item lured, ruled
+  \item luring, ruling
+  \item lust, slut
+  \item lusts, sluts
+  \item dam, mad
+  \item dame, deam, made, mead
+  \item magennis, meanings
+  \item maiden, medina
+  \item lima, mail
+  \item mailed, medial
+  \item main, mina
+  \item aims, mais
+  \item lame, male, meal
+  \item lingam, malign
+  \item magrane, manager
+  \item childman, manchild
+  \item amendment, mandement
+  \item lynam, manly
+  \item mano, moan, mona
+  \item mantel, mantle, mental
+  \item manures, surname
+  \item marble, ramble
+  \item charm, march
+  \item charmed, marched
+  \item mardle, medlar
+  \item mares, reams, smear
+  \item margarine, margerain
+  \item mahar, marha
+  \item admirer, married
+  \item antrim, martin
+  \item army, mary, myra
+  \item mason, monas
+  \item master, stamer, stream
+  \item masters, streams
+  \item macht, match
+  \item mater, trema
+  \item matey, meaty
+  \item beamy, maybe
+  \item em, me
+  \item dames, meads
+  \item males, meals
+  \item mate, meat, tame, team
+  \item meatpot, peatmot
+  \item mechanics, mischance
+  \item claimed, decimal, medical
+  \item declaims, medicals
+  \item meet, teem
+  \item meeting, teeming
+  \item hem, meh
+  \item message, seagems
+  \item met, tem
+  \item mguckin, mucking
+  \item michans, mischna
+  \item midden, minded
+  \item mien, mine
+  \item minions, nominis
+  \item minuet, minute
+  \item minuets, minutes, sminute
+  \item miracle, reclaim
+  \item mis, smi
+  \item amiss, missa
+  \item merit, mitre
+  \item mister, mitres
+  \item atom, moat
+  \item bom, mob
+  \item domus, modus
+  \item mio, moi
+  \item maior, mario, moira
+  \item molars, morals
+  \item moo, oom
+  \item doom, mood
+  \item mop, pom
+  \item mope, poem
+  \item more, rome
+  \item gourme, morgue
+  \item moores, morose
+  \item most, mots, stom
+  \item motes, smote, tomes
+  \item mothers, smother
+  \item mow, wom
+  \item mp, pm
+  \item chum, much
+  \item gum, mug
+  \item demurrer, murderer
+  \item hums, mush
+  \item must, smut
+  \item ban, nab
+  \item chazen, nachez
+  \item lain, nail
+  \item amen, mane, mean, name
+  \item amend, named
+  \item manse, means, mensa, names
+  \item anns, nans
+  \item nap, pan
+  \item nasty, tansy
+  \item en, ne
+  \item earn, near
+  \item canter, nectar, recant
+  \item eden, need
+  \item dense, needs
+  \item hinges, neighs
+  \item neither, therein
+  \item nemo, omne
+  \item incest, insect, nescit
+  \item inmate, netaim
+  \item nerve, never
+  \item news, sewn
+  \item niggers, snigger
+  \item night, thing
+  \item nightcap, patching
+  \item mathering, nightmare
+  \item lin, nil
+  \item bison, nobis
+  \item chon, noch
+  \item don, nod
+  \item mon, nom
+  \item nono, noon
+  \item eons, nose, ones
+  \item nodes, nosed
+  \item jameson, nosejam
+  \item noserag, oranges
+  \item nostrae, treason
+  \item not, ont, ton
+  \item notices, section
+  \item now, own, won
+  \item nutarians, saturnian
+  \item nuts, stun, sunt
+  \item athos, oaths
+  \item observe, obverse
+  \item connoro, oconnor
+  \item doldy, oddly
+  \item doz, odz
+  \item ero, oer, ore, roe
+  \item fo, of
+  \item lio, oil
+  \item doeil, oiled
+  \item oillamp, palmoil
+  \item dolly, oldly
+  \item olivets, violets
+  \item omens, omnes
+  \item omnipotent, tnetopinmo
+  \item omnis, simon
+  \item no, on
+  \item cone, once
+  \item eon, one
+  \item lionel, oneill
+  \item lionels, oneills
+  \item lyon, only
+  \item boom, oomb
+  \item optic, topic
+  \item or, ro
+  \item oar, ora
+  \item ontario, oration
+  \item orb, rob
+  \item laredo, ordeal
+  \item groan, organ
+  \item groans, organs
+  \item oriental, relation
+  \item others, throes
+  \item iota, otia
+  \item otto, toto
+  \item ought, tough
+  \item nous, onus, ouns
+  \item ours, sour
+  \item out, tuo
+  \item outside, tedious
+  \item over, vero
+  \item owe, woe
+  \item owns, snow, sown
+  \item oyster, storey
+  \item oysters, storeys
+  \item leap, pale, peal, plea
+  \item paled, pedal
+  \item paler, pearl
+  \item palice, plaice
+  \item lapels, palles
+  \item lamp, palm
+  \item lamps, palms, psalm
+  \item paltry, partly
+  \item nape, neap, pane
+  \item panel, penal, plane
+  \item pans, snap, span
+  \item appal, papal
+  \item par, rap
+  \item drap, pard
+  \item parents, pastern
+  \item pairs, paris
+  \item parsley, players
+  \item parties, pirates
+  \item pass, spas
+  \item passed, spades
+  \item past, pats, spat, stap, taps
+  \item pasteur, pasture
+  \item pate, peat, tape
+  \item kcirtap, patrick
+  \item pasty, patsy
+  \item pawns, spawn
+  \item pays, yaps
+  \item pear, rape
+  \item peartree, repartee
+  \item apes, peas
+  \item peer, pere, pree
+  \item deeper, peered
+  \item pelters, petrels
+  \item per, pre
+  \item peripatetic, precipitate
+  \item perkin, pinker
+  \item pester, peters
+  \item hampton, phantom
+  \item phrases, shapers
+  \item pieces, specie
+  \item peri, pier, ripe
+  \item pierce, recipe
+  \item piled, plied
+  \item pills, spill
+  \item pilots, pistol, spoilt
+  \item nip, pin
+  \item alpine, pineal
+  \item dolphin, pinhold
+  \item pins, snip, spin
+  \item piss, sips
+  \item pisser, spires
+  \item capel, place
+  \item calpes, places
+  \item lapin, plain
+  \item naples, planes
+  \item petals, plates, pleats, staple
+  \item paly, play
+  \item lapse, leaps, pleas
+  \item asleep, please
+  \item leapers, pleaser
+  \item perils, pliers
+  \item plod, pold
+  \item plood, poldo
+  \item gulp, plug
+  \item plumtree, trumplee
+  \item plup, pulp
+  \item bookpocket, pocketbook
+  \item pointer, protein
+  \item piston, points
+  \item leop, pole
+  \item loop, polo, pool
+  \item hoop, pooh
+  \item looping, pooling
+  \item poop, popo
+  \item port, trop
+  \item porter, report
+  \item porters, reports
+  \item pos, sop
+  \item poses, posse
+  \item post, pots, spot, stop, tops
+  \item plasto, platos, postal
+  \item poster, presto, topers
+  \item option, potion
+  \item persia, praise
+  \item despair, pardies, praised
+  \item pram, ramp
+  \item performed, preformed
+  \item eeltraps, prelates
+  \item paternal, prenatal
+  \item present, serpent
+  \item presenting, serpenting
+  \item depress, pressed
+  \item prey, pyre
+  \item persist, priests, stripes
+  \item printers, reprints
+  \item prints, sprint
+  \item drop, prod
+  \item perso, pores, poser, prose, ropes
+  \item proud, pudor
+  \item pup, upp
+  \item peru, pure
+  \item pulper, purple
+  \item purse, super
+  \item pursuing, usurping
+  \item pus, sup, ups
+  \item put, tup
+  \item patty, pyatt
+  \item cinque, quince
+  \item quiet, quite
+  \item ar, ra
+  \item acres, cares, cesar, races, sacre, scare
+  \item caring, racing
+  \item fart, raft
+  \item gear, rage
+  \item aries, arise, raise
+  \item arises, raises
+  \item arising, raising
+  \item garn, rang
+  \item garner, ranger
+  \item kran, rank
+  \item rapier, repair
+  \item napier, rapine
+  \item paring, raping
+  \item rapparee, reappear
+  \item dapper, rapped
+  \item part, rapt, trap
+  \item rare, rear
+  \item raths, trash
+  \item latter, rattle
+  \item dare, dear, read
+  \item rayed, ready
+  \item earl, laer, lear, real
+  \item realised, sidereal
+  \item irately, reality
+  \item dearer, reader, reared, reread
+  \item bounder, rebound
+  \item cellar, recall
+  \item deceiver, received
+  \item centre, recent
+  \item precise, recipes
+  \item crates, rectas, traces
+  \item der, red
+  \item ere, ree
+  \item rede, reed
+  \item leers, reels
+  \item gerard, regard
+  \item gerards, regards
+  \item ignore, region
+  \item htengier, reigneth
+  \item latere, relate, tearle
+  \item altered, related
+  \item levanter, relevant
+  \item lyre, rely
+  \item repast, tapers
+  \item leper, repel
+  \item rescue, secure
+  \item reserve, reverse
+  \item reserved, reversed
+  \item erins, reins, resin, rinse, risen, siren
+  \item resorted, restored
+  \item pres, resp
+  \item respect, sceptre, spectre
+  \item respects, sceptres
+  \item erst, rest, ster
+  \item desert, rested
+  \item rests, tress
+  \item retort, rotter
+  \item henri, rhine
+  \item bridal, ribald
+  \item riband, rinbad
+  \item dire, ride
+  \item grin, ring
+  \item ringlets, sterling
+  \item grins, rings
+  \item diners, rinsed
+  \item rise, sire
+  \item rises, sires
+  \item ristori, tiroirs
+  \item ador, road
+  \item adorer, roared
+  \item roars, sorra
+  \item cork, rock
+  \item corking, rocking
+  \item corks, rocks
+  \item oder, rode
+  \item grouse, rogues
+  \item arnold, roland
+  \item moran, norma, roman
+  \item moore, romeo
+  \item moor, room
+  \item moors, rooms
+  \item root, toro
+  \item roost, roots, toros
+  \item pero, pore, rope
+  \item pored, roped
+  \item roes, rose, sore
+  \item rotha, torah
+  \item rogue, rouge
+  \item outer, route
+  \item bur, rub
+  \item lubber, rubble
+  \item bury, ruby
+  \item dure, rude, rued
+  \item lure, rule
+  \item mur, rum
+  \item run, urn
+  \item rushes, ushers
+  \item rictus, rustic
+  \item ryan, yarn
+  \item rye, yer
+  \item ads, das, sad
+  \item adders, sadder
+  \item gases, sages
+  \item aids, said
+  \item ails, sail
+  \item saint, satin, stain
+  \item saints, stains
+  \item allys, sally
+  \item lasted, salted
+  \item same, seam
+  \item ans, san
+  \item antics, sancti
+  \item dans, sand
+  \item dawsons, sandows
+  \item nags, sang
+  \item sargent, strange
+  \item santa, satan
+  \item dates, sated
+  \item save, vase
+  \item saviour, various
+  \item aswing, sawing
+  \item cabbys, scabby
+  \item claps, clasp, scalp
+  \item sacred, scared
+  \item sacring, scaring
+  \item cents, scent
+  \item descent, scented
+  \item schooling, slooching
+  \item corse, score
+  \item corns, scorn
+  \item capers, scrape
+  \item crawls, scrawl
+  \item creams, scream
+  \item cuts, scut
+  \item elsa, sale, seal
+  \item sales, seals
+  \item arches, sacher, search
+  \item erased, seared
+  \item seated, sedate, teased
+  \item cresset, secrets
+  \item ascertain, sectarian
+  \item ees, see
+  \item ells, sell
+  \item gillens, selling
+  \item selves, vessel
+  \item ends, send
+  \item hornes, senhor
+  \item nest, nets, sent, tens
+  \item inserted, resident, sentried
+  \item pisses, sepsis
+  \item reagents, sergeant
+  \item osier, serio
+  \item presented, serpented
+  \item presents, serpents
+  \item servant, taverns
+  \item serve, sever, verse
+  \item servo, verso
+  \item est, set
+  \item reveals, several
+  \item glens, sgenl
+  \item hades, heads, shade
+  \item sashed, shades
+  \item halls, shall
+  \item halts, shalt
+  \item shame, shema
+  \item ashen, shane
+  \item heaps, phase, shape
+  \item phases, shapes
+  \item hares, hears, share
+  \item harps, sharp
+  \item shattering, straighten
+  \item shawl, walsh
+  \item hes, she
+  \item shares, shears
+  \item hostages, shegoats
+  \item hells, shell
+  \item hews, shew
+  \item deshil, shield
+  \item hips, ship
+  \item kochs, shock
+  \item hose, shoe
+  \item hooks, shook
+  \item hoots, shoot, sooth
+  \item shooting, soothing
+  \item shout, south, thous
+  \item hows, show, whos
+  \item shower, whores
+  \item shiver, shrive
+  \item shut, thus
+  \item dies, ides, side
+  \item sidling, sliding
+  \item devise, sieved
+  \item higgins, sighing
+  \item saling, signal
+  \item signs, sings
+  \item enlist, inlets, listen, silent, tinsel
+  \item likens, silken
+  \item ills, sill
+  \item silly, slily
+  \item listed, silted
+  \item livers, silver
+  \item impress, simpers
+  \item ins, sin
+  \item inces, since
+  \item ines, sine
+  \item sign, sing
+  \item inns, sinn
+  \item harris, sirrah
+  \item resist, sister
+  \item atitudes, situated
+  \item js, sj
+  \item sink, skin
+  \item sinks, skins
+  \item salient, slainte
+  \item lakes, leaks, slake
+  \item lasts, salts, slats
+  \item salve, slave, vales
+  \item peels, sleep
+  \item lenders, slender
+  \item selp, slep
+  \item lids, slid
+  \item sidles, slides
+  \item lights, slight
+  \item list, slit
+  \item lopes, poles, slope
+  \item lows, slow
+  \item laughs, sluagh
+  \item seculi, sluice
+  \item lungs, slung
+  \item macks, smack
+  \item smart, trams
+  \item mattress, smartest
+  \item miles, slime, smile
+  \item misled, smiled
+  \item mittens, smitten
+  \item mocks, smock
+  \item nails, slain, snail
+  \item snake, sneak
+  \item slander, snarled
+  \item snakes, sneaks
+  \item nevils, snivel
+  \item norse, senor, snore
+  \item rodents, snorted
+  \item snot, sont, tons
+  \item guns, snug, sung
+  \item oars, rosa, soar
+  \item bos, sob
+  \item boers, bores, robes, sober
+  \item acrostic, socratic
+  \item dos, sod
+  \item seddon, sodden
+  \item moods, sodom
+  \item forest, foster, softer
+  \item oils, soil
+  \item isolde, soiled
+  \item alors, solar
+  \item lemons, melons, solemn
+  \item loses, soles
+  \item nos, ons, son
+  \item sono, soon
+  \item rorys, sorry
+  \item orts, rots, sort
+  \item dorset, sorted, stored, strode
+  \item pseudo, souped
+  \item shouting, southing
+  \item paces, space
+  \item pains, spain
+  \item snaps, spans
+  \item parks, spark
+  \item rasps, spars
+  \item peaks, spake, speak
+  \item pears, spare, spear
+  \item scep, spec
+  \item pelts, slept, spelt
+  \item prides, spider
+  \item pikes, spike
+  \item spilt, split
+  \item penis, pensi, spine
+  \item pits, spit, tips
+  \item polis, spoil
+  \item pokes, spoke
+  \item ports, sport
+  \item prays, spray
+  \item parsed, spared, spread
+  \item peers, spree
+  \item grips, sprig
+  \item punks, spunk
+  \item quires, squire
+  \item gates, stage
+  \item skates, stakes
+  \item least, slate, stale, steal, tales
+  \item charts, starch
+  \item rates, stare, tears
+  \item stared, trades, treads
+  \item start, tarts
+  \item averts, starve, vaster
+  \item astute, statue
+  \item stayed, steady
+  \item athletes, stealeth
+  \item genitals, stealing
+  \item sleet, steel
+  \item deepest, steeped
+  \item integers, steering
+  \item pest, pets, sept, step
+  \item stanhope, stephano
+  \item stiff, tiffs
+  \item lilts, still
+  \item stoer, store
+  \item notes, stone, tones
+  \item stood, todos
+  \item spots, stops
+  \item stoers, stores
+  \item stout, touts
+  \item sartin, strain, trains
+  \item mastery, streamy
+  \item setter, street, tester
+  \item skirting, striking
+  \item grindstone, stringendo
+  \item spirt, strip, trips
+  \item esprit, priest, stripe, tripes
+  \item stiver, strive
+  \item stokers, strokes
+  \item struck, trucks
+  \item grunts, strung
+  \item student, stunted
+  \item bluest, bustle, subtle
+  \item argus, sugar
+  \item suing, using
+  \item suit, tuis
+  \item duties, suited
+  \item lusk, sulk
+  \item mus, sum, ums
+  \item sun, uns
+  \item dunams, sundam
+  \item insult, sunlit
+  \item presume, supreme
+  \item puss, sups
+  \item rus, sur
+  \item ruse, sure
+  \item furs, surf
+  \item surge, urges
+  \item answ, swan
+  \item sweep, weeps
+  \item swell, wells
+  \item dwindles, swindled
+  \item swine, wines
+  \item bleats, stable, tables
+  \item rialto, tailor
+  \item tails, talis
+  \item kate, take
+  \item keats, stake, steak, takes
+  \item late, leat, tale
+  \item latent, latten, talent
+  \item stalk, talks
+  \item tallwhitehatted, whitetallhatted
+  \item mat, tam
+  \item ant, nat, tan
+  \item gnat, tang
+  \item salutant, tantalus
+  \item apt, pat, tap
+  \item paste, tapes
+  \item rata, tara
+  \item erate, taree
+  \item tantumer, tarentum
+  \item state, taste, teats, testa
+  \item stated, tasted
+  \item states, tastes
+  \item stating, tasting
+  \item taw, wat
+  \item et, te
+  \item ate, eat, tea
+  \item cheat, hecat, tache, teach
+  \item mates, meats, steam, teams
+  \item rate, tare, tear
+  \item net, ten
+  \item sennet, tenens
+  \item notre, tenor
+  \item nostre, tenors
+  \item teens, tense
+  \item statement, testament
+  \item eht, the
+  \item theatre, thereat
+  \item herit, their
+  \item ether, there, three
+  \item esther, hester, theres
+  \item sheet, thees, these
+  \item hight, thigh
+  \item hint, thin
+  \item nights, things
+  \item hist, shit, this
+  \item helotic, tholice
+  \item dearth, hatred, thread
+  \item hardest, threads
+  \item cither, thrice
+  \item throat, troath
+  \item shorten, thrones
+  \item throw, worth, wroth
+  \item diet, tide, tied
+  \item dignity, tidying
+  \item itll, lilt, till
+  \item tilted, titled
+  \item mit, tim
+  \item item, mite, time
+  \item items, times
+  \item nit, tin
+  \item glinting, tingling
+  \item pit, tip
+  \item rit, tir
+  \item tired, tried
+  \item doaty, toady, today
+  \item capotes, toecaps
+  \item goat, toga
+  \item dolt, told
+  \item eton, note, tone
+  \item oot, too
+  \item tloo, tool
+  \item pot, top
+  \item optical, topical
+  \item quote, toque
+  \item rote, tore
+  \item torts, trots
+  \item tory, troy, tyro
+  \item hotter, tother
+  \item couth, touch
+  \item rout, tour, trou
+  \item outs, tous
+  \item tower, wrote
+  \item towers, towser
+  \item crate, trace
+  \item trade, tread
+  \item starred, traders
+  \item darting, trading
+  \item terminal, tramline
+  \item instanter, transient
+  \item transit, tristan
+  \item parts, strap, traps
+  \item travel, varlet
+  \item stray, trays
+  \item ter, tre
+  \item gradient, treading
+  \item retta, treat
+  \item taters, treats
+  \item reset, steer, trees
+  \item trews, wrest
+  \item trail, trial
+  \item integral, triangle
+  \item bestir, tribes
+  \item tribunes, turbines
+  \item rites, tries
+  \item filter, trifle
+  \item flirting, trifling
+  \item trove, votre
+  \item strut, trust
+  \item struts, trusts
+  \item turnedup, upturned
+  \item turnip, turpin
+  \item turtle, utterl
+  \item stewed, tweeds
+  \item tow, two
+  \item stow, twos
+  \item tyrannies, tyrannise
+  \item hug, ugh
+  \item lustre, result, rustle, sutler, ulster
+  \item stimulate, ultimates
+  \item lunation, ultonian
+  \item nebula, unable
+  \item manu, maun, unam
+  \item nude, unde
+  \item refunded, underfed
+  \item haunting, unhating
+  \item united, untied
+  \item unlit, until
+  \item nudity, untidy
+  \item pu, up
+  \item catsup, upcast
+  \item poun, upon
+  \item sue, use
+  \item deus, sued, used
+  \item tu, ut
+  \item reunite, uterine
+  \item ivan, vain
+  \item laved, valde
+  \item vale, veal
+  \item vast, vats
+  \item veering, vergine
+  \item inev, vein
+  \item serves, verses
+  \item stave, vesta
+  \item salvi, vials
+  \item avis, vias
+  \item ive, vie
+  \item views, wives
+  \item irving, virgin
+  \item vision, voisin
+  \item cove, voce
+  \item swain, wains
+  \item waiters, wariest
+  \item waist, waits
+  \item wake, weak
+  \item wales, weals
+  \item andrew, derwan, wander, warden, warned
+  \item wants, wasnt
+  \item paw, wap
+  \item raw, war
+  \item swarm, warms
+  \item straw, swart, warts
+  \item saw, was
+  \item shaw, wash
+  \item sweat, waste
+  \item ewart, water
+  \item sway, ways
+  \item ware, wear
+  \item swear, wares, wears
+  \item weather, whereat
+  \item dew, edw, wed
+  \item sewed, weeds
+  \item pwee, weep
+  \item sweeper, weepers
+  \item weird, wider
+  \item welkin, winkle
+  \item stew, west
+  \item wheedle, wheeled
+  \item hewn, when
+  \item nowhere, whereon
+  \item hewing, whinge
+  \item otherwise, whiterose
+  \item dewily, widely
+  \item swig, wigs
+  \item lewis, wiles
+  \item swill, wills
+  \item swing, wings
+  \item swipe, wipes
+  \item weir, wire
+  \item swire, weirs, wires
+  \item whit, with
+  \item wist, wits
+  \item flows, fowls, wolfs
+  \item nowt, town, wont
+  \item sword, words
+  \item rowes, swore, worse
+  \item wirst, wrist, writs
+  \item grown, wrong
+  \item wisely, wylies
+  \item wyse, yews
+  \item johnyellows, yellowjohns
+  \item oily, yilo
+  \item muy, yum
+\end{itemize}
+% --- End Anagrams ---
+\vfill
+\end{document}

@@ -1,4 +1,7 @@
-
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
 
 public class tryHeapsort {
 
@@ -75,19 +78,66 @@ public class tryHeapsort {
 
         return heap; //sorted
     }
+    //Method from last prac
+    //This method reads the file and returns an array of words
+    static String[] readWordsFromFile(String filename) throws IOException {
+
+        //For holding the words we read
+        ArrayList<String> words = new ArrayList<>();
+
+
+        BufferedReader reader = new BufferedReader(new FileReader(filename));
+        String line;
+
+        while ((line = reader.readLine()) != null) {
+
+            // convert to lowercase
+            line = line.toLowerCase();
+
+            // remove punctuation and replace with an empty string
+            line = line.replaceAll("[^a-z ]", "");
+
+            //Split the line into words using whitespace as a delimiter
+            String[] parts = line.split("\\s+");
+
+            //Add the words to our list
+            // ignoring empty strings
+            for (String word : parts) {
+                if (!word.isEmpty()) {
+                    words.add(word);
+                }
+            }
+        }
+
+        reader.close();
+
+        //Convert the list of words to an array and return it
+        return words.toArray(new String[0]);
+    }
 
     //Main method to test the heapsort implementation
-    public static void main(String[] args) {
-        String[] arr = {"banana", "1","apple","dog","cat","zebra",
-        "orange","pear","grape","lemon","kiwi",
-        "melon","plum","peach","berry","lime",
-        "mango","fig","date","papaya","guava"};
-        String[] sortedArr = topDownHeapSort(arr);
+    public static void main(String[] args) throws IOException {
 
-        System.out.println("Sorted array:");
+        String[] arr = readWordsFromFile("joyce1992_ulysses.txt");
+
+        int startTime0 = (int) System.currentTimeMillis();
+        String[] sortedArr = topDownHeapSort(arr);
+        int endTime0 = (int) System.currentTimeMillis();
+
+        int startTime = (int) System.currentTimeMillis();
+        sortedArr = bottomUpHeapSort(arr);
+        int endTime = (int) System.currentTimeMillis();
+
+
+        
+        System.out.println("====================\nSorted array:");
         for (String str : sortedArr) {
             System.out.println(str);
         }
+        System.out.println("Time taken to sort using top-down heap sort: " + (endTime0 - startTime0) + " milliseconds");
+
+        System.out.println("Time taken to sort using bottom-up heap sort: " + (endTime - startTime) + " milliseconds");
+
     }
 
     //topDownHeap

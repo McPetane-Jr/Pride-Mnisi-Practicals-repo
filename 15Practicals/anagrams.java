@@ -171,7 +171,7 @@ public class anagrams {
         sortedGroups = removeDuplicates(sortedGroups);
         // Attach anagrams to template
         attachAnagramsToTemplate(sortedGroups, "anagrams.tex", "anagrams_result.tex");
-        //writeLatexFile(sortedGroups);
+        writeLatexFile(sortedGroups);
 
 
     }
