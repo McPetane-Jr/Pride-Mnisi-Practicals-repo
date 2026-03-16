@@ -90,8 +90,41 @@ public class tryHeapsort {
         }
     }
 
+    //topDownHeap
+    static void topDownHeap(String[] arr) {
+        heap = new String[arr.length]; //initialize the heap array
+        size = 0; //initialize the size of the heap
 
+        //Inserting each element from the input array into the heap
+        for (String word : arr) {
+            insert(word);
+        }
+    }
 
+    //Method to insert an element into the heap
+    static void insert(String word) {
+
+        //Placing the new word at the end of the heap
+        heap[size] = word;
+        heapifyUp(size); //heapifying up from the last index to restore the heap property
+        size++; //incrementing the size of the heap
+    }
+
+    //Method to heapify up from a given index
+    static void heapifyUp(int index) {
+
+        while (index>0) { //while the index is not the root node 
+            
+        
+            int parentIndex = (index - 1) / 2; //Calculating the index of the parent node
+
+            //Comparing the current node with its parent and swapping if necessary
+            if (heap[index].compareTo(heap[parentIndex]) > 0) {
+                swap(index, parentIndex); //swap the current node with its parent
+                index = parentIndex; //update the index to the parent's index to continue heapifying up
+            }else break; //if the current node is not greater than its parent, we can stop heapifying up
+        }
+    }
 
 
 
