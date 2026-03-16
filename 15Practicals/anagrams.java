@@ -110,20 +110,33 @@ public class anagrams {
 
             String line;
             while ((line = reader.readLine()) != null) {
+                // Look for the placeholder in the template
                 if (line.contains("\\include{theAnagrams}")) {
                     // Replace this line with your anagrams
                     writer.println("% --- Begin Anagrams ---");
+                    // Write the anagrams in LaTeX itemize format
                     writer.println("\\begin{itemize}");
+                    // Only include groups that have more than one anagram
                     for (List<String> group : groups) {
+                        // Sort the group alphabetically before writing
                         if (group.size() > 1) {
+                            // Sort the anagrams in the group alphabetically
+
                             Collections.sort(group); // Sort words alphabetically
+
+                            // Join the sorted anagrams with commas and write as an item
                             String joined = String.join(", ", group);
+
+                            // Write the joined anagrams as a LaTeX item
                             writer.println("  \\item " + joined);
                         }
                     }
+                    // End the itemize environment
                     writer.println("\\end{itemize}");
+                    // Mark the end of the anagrams section
                     writer.println("% --- End Anagrams ---");
                 } else {
+
                     // Copy the line as-is
                     writer.println(line);
                 }
@@ -131,12 +144,13 @@ public class anagrams {
 
             reader.close();
             writer.close();
+
             System.out.println("New LaTeX file written to " + outputFile);
         } catch (IOException e) {
             System.out.println("Error processing LaTeX template: " + e.getMessage());
         }
     }
-
+    // Main method to read words, group anagrams, and write to LaTeX
     public static void main(String[] args) throws Exception {
 
         String[] words = readWordsFromFile("joyce1992_ulysses.txt");
