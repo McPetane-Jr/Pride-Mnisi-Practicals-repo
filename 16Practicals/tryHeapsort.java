@@ -8,7 +8,7 @@ public class tryHeapsort {
     static void bottomUpHeap(String[] arr) {
 
         heap = arr.clone(); //cloning so that we don't modify the original array
-        size = heap.length;
+        size = heap.length; //size of the heap
 
         int lastParent = (size - 2) / 2; //index of the last parent node
 
@@ -18,10 +18,39 @@ public class tryHeapsort {
         }
 
     } 
-
+    
     private static void heapifyDown(int i) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'heapifyDown'");
+        int largest = i; //initialize largest as the current node
+
+        //Calculating the indices of the left and right children
+        int leftChild = 2 * i + 1;
+        int rightChild = 2 * i + 2;
+
+        //Comparing the left child with the current largest
+
+        //leftChild < size compares the index of the left child 
+        //with the size of the heap to ensure we don't go out of bounds
+
+        //heap[leftChild].compareTo(heap[largest]) > 0 compares the value of the 
+        //left child with the value of the current largest node.
+
+        if(leftChild < size && heap[leftChild].compareTo(heap[largest]) > 0) {
+            largest = leftChild;
+        }
+
+        //Comparing the right child with the current largest
+        if(rightChild < size && heap[rightChild].compareTo(heap[largest]) > 0) {
+            largest = rightChild;
+        }
+
+        //If the largest node is not the current node, 
+        //we need to swap and heapify down
+        if (largest != i) {
+            
+        swap(i, largest); //swap the current node with the largest node
+        heapifyDown(largest);//recursively heapify the affected subtree to preserve the heap property
+        }
+    
     }
 
 
