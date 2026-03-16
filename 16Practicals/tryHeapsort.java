@@ -76,7 +76,21 @@ public class tryHeapsort {
         return heap; //sorted
     }
 
-    
+    //Main method to test the heapsort implementation
+    public static void main(String[] args) {
+        String[] arr = {"banana", "1","apple","dog","cat","zebra",
+        "orange","pear","grape","lemon","kiwi",
+        "melon","plum","peach","berry","lime",
+        "mango","fig","date","papaya","guava"};
+        String[] sortedArr = bottomUpHeapSort(arr);
+
+        System.out.println("Sorted array:");
+        for (String str : sortedArr) {
+            System.out.println(str);
+        }
+    }
+
+
 
 
 
