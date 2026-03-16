@@ -53,6 +53,15 @@ public class tryHeapsort {
     
     }
 
+    //Method to swap two nodes in the heap
+    private static void swap(int i, int j) {
+        String temp = heap[i];
+        heap[i] = heap[j];
+        heap[j] = temp;
+    }
+
+    
+
 
 
 
