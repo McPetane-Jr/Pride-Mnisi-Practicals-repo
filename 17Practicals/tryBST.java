@@ -65,6 +65,7 @@ public class tryBST {
             //Delete the inorder successor
             root2.right = deleteHelper(root2.right, root2.data); 
         }
+        return root2;
     }
     private int minValue(Node right) {
         int minv = right.data; 
@@ -172,7 +173,7 @@ class Main {
 
         for (int i = 0; i < runs; i++) {
 
-            int nNodes = 100;
+            int nNodes = 10;
             
             int max = (int) (Math.pow(2, nNodes) - 1); 
 
@@ -196,12 +197,37 @@ class Main {
 
         }
         
-        
+        //Calculate average durations
+        double buildAvg = average(buildDurations);
+        double deleteAvg = average(deleteDurations);
 
-        
+        double buildStdDev = standardDeviation(buildDurations, buildAvg);
+
+        double deleteStdDev = standardDeviation(deleteDurations, deleteAvg);
+
+        System.out.println("=============AVERAGES=============");
+        System.out.println("Average Build Duration: " + buildAvg);
+        System.out.println("Average Delete Duration: " + deleteAvg);
+        System.out.println("=============STANDARD DEVIATIONS=============");
+        System.out.println("Build Standard Deviation: " + buildStdDev);
+        System.out.println("Delete Standard Deviation: " + deleteStdDev);
         
 
     }
 
-    
+    private static double standardDeviation(double[] durations, double avg) {
+        double sum = 0;
+        for (double d : durations) {
+            sum += Math.pow(d - avg, 2);
+        }
+        return Math.sqrt(sum / durations.length);
+    }
+
+    private static double average(double[] durations) {
+        double sum = 0;
+        for (double d : durations) {
+            sum += d;
+        }
+        return sum / durations.length;
+    }
 }
