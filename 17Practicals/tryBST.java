@@ -168,6 +168,7 @@ class Main {
 
         int runs= 20;
         double[] buildDurations = new double[runs];
+        double[] deleteDurations = new double[runs];
 
         for (int i = 0; i < runs; i++) {
 
@@ -175,17 +176,32 @@ class Main {
             
             int max = (int) (Math.pow(2, nNodes) - 1); 
 
-            tryBST bst = new tryBST(); //Create a new instance of the tryBST class
+            tryBST bst = new tryBST();
+            
+            //Timing builds
             long startTime = System.nanoTime(); //Record the start time of the operation
+            bst.balancedBST(1, max); //Build a balanced binary search tree with nNodes nodes
             long endTime = System.nanoTime(); //Record the end time of the operation
             long duration = endTime - startTime; //Calculate the duration of the operation
             buildDurations[i] = duration;
-            
 
-        //Display the tree
-        //bst.display();
-        System.out.println("Is the tree a BST? " + bst.isBST(bst.root));
+            System.out.println("Is BST?:" + bst.isBST(bst.root)); 
+
+            //Timing Deletions
+            long startTime2 = System.nanoTime(); 
+            bst.removeEvenNumbers();
+            long endTime2 = System.nanoTime();
+            long duration2 = endTime2 - startTime2;
+            deleteDurations[i] = duration2;
+
+        }
+        
+        
+
+        
         
 
     }
+
+    
 }
