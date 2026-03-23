@@ -10,8 +10,6 @@ public class tryBST {
         root = insertHelper(root, newNode); //This calls the helper method to recursively insert the node into the tree, starting from the root
         System.out.println("Node inserted: " + newNode.data); //Print a message indicating that the node has been inserted
     }
-
-    //Helper method to insert a node into the tree recursively
     private Node insertHelper(Node root, Node newNode) {
         int existingData = newNode.data; //Get the value of the node to be inserted
         
@@ -68,7 +66,6 @@ public class tryBST {
             root2.right = deleteHelper(root2.right, root2.data); 
         }
     }
-
     private int minValue(Node right) {
         int minv = right.data; 
         while (right.left != null) {
@@ -96,7 +93,6 @@ public class tryBST {
         displayHelper(root); //This calls the helper method to recursively display the tree, starting from the root
 
     }
-    //Helper method to display the tree recursively
     private void displayHelper(Node root) {
 
         if (root != null) { //If the root is not null, we can display its value and its children
@@ -126,6 +122,28 @@ public class tryBST {
         return isBSTHelper(root2.left, minValue, root2.data - 1) && isBSTHelper(root2.right, root2.data + 1, maxValue);
     
     }
+
+    //Remove all even numbers from the tree
+    public void removeEvenNumbers() {
+        root = removeEvenNumbersHelper(root); 
+    }
+    private Node removeEvenNumbersHelper(Node root) {
+        if (root == null) return null; //base caes
+
+        root.left = removeEvenNumbersHelper(root.left); //Recursively remove even numbers from the left subtree
+        root.right = removeEvenNumbersHelper(root.right); //Recursively remove even numbers from the right subtree
+
+        if (root.data % 2 == 0) { 
+            if (root.left == null) return root.right; 
+            else if (root.right == null) return root.left; 
+
+            //If both children are not null, we need to find the inorder successor (smallest in the right subtree) to replace the current node
+            root.data = minValue(root.right); 
+            root.right = deleteHelper(root.right, root.data); 
+        }
+
+        return root; //updated root of the subtree
+    }
 }
 
 class Node {
@@ -145,19 +163,23 @@ class Main {
     public static void main(String[] args) {
 
         
-        int size = 5; //Size of the tree
-        int totalNodes = (int) Math.pow(2, size) - 1; //Number of nodes to be inserted into the tree
+        
+        
 
-        int reps= 20;
-        double[] durations = new double[reps];
+        int runs= 20;
+        double[] buildDurations = new double[runs];
 
-        for (int i = 0; i < reps; i++) {
+        for (int i = 0; i < runs; i++) {
+
+            int nNodes = 100;
+            
+            int max = (int) (Math.pow(2, nNodes) - 1); 
 
             tryBST bst = new tryBST(); //Create a new instance of the tryBST class
             long startTime = System.nanoTime(); //Record the start time of the operation
             long endTime = System.nanoTime(); //Record the end time of the operation
             long duration = endTime - startTime; //Calculate the duration of the operation
-            durations[i] = duration;
+            buildDurations[i] = duration;
             
 
         //Display the tree
