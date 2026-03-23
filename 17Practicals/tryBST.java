@@ -8,7 +8,7 @@ public class tryBST {
     public void insert(Node newNode) {
 
         root = insertHelper(root, newNode); //This calls the helper method to recursively insert the node into the tree, starting from the root
-
+        System.out.println("Node inserted: " + newNode.data); //Print a message indicating that the node has been inserted
     }
 
     //Helper method to insert a node into the tree recursively
@@ -25,17 +25,21 @@ public class tryBST {
             root.left = insertHelper(root.left, newNode);
             //This makes the left child be the root of the left subtree,
             //and we recursively call the insertHelper method to insert the new node into the left subtree
+            
+        
+            System.out.println("New left child: " + newNode.data); //Print a message indicating that the new node has been inserted as a left child
         }
         else {
             root.right = insertHelper(root.right, newNode);
             //This makes the right child be the root of the right subtree,
             //and we recursively call the insertHelper method to insert the new node into the right subtree
+        
+            System.out.println("New right child: " + newNode.data); //Print a message indicating that the new node has been inserted as a right child
         }
 
-
-
+        return root;
     
-    
+    }
 }
 
 class Node {
@@ -48,5 +52,20 @@ class Node {
         this.data = data;
         this.left = null;
         this.right = null;
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        tryBST bst = new tryBST(); //Create a new instance of the tryBST class
+
+        //Insert some nodes into the tree
+        bst.insert(new Node(10));
+        bst.insert(new Node(5));
+        bst.insert(new Node(15));
+        bst.insert(new Node(3));
+        bst.insert(new Node(7));
+        bst.insert(new Node(12));
+        bst.insert(new Node(18));
     }
 }
