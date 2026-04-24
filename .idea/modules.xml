@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Term 2/21A Practical/21A Practical.iml" filepath="$PROJECT_DIR$/Term 2/21A Practical/21A Practical.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Pride-Mnisi-Practicals-repo.iml" filepath="$PROJECT_DIR$/.idea/Pride-Mnisi-Practicals-repo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Term 1/Term 1.iml" filepath="$PROJECT_DIR$/Term 1/Term 1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Term 2/Term 2.iml" filepath="$PROJECT_DIR$/Term 2/Term 2.iml" />
+    </modules>
+  </component>
+</project>

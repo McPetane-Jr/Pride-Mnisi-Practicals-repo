@@ -33,5 +33,14 @@ class BST {
         this.size = size;
     }
     
-    public boolean search
+    public boolean search(int data){
+        return searchInt(root, data)
+    }
+    //
+    private boolean searchInt(Node<E> node, int data) {
+        if (node==null) return false;
+        if (data==node.getData()) return true;
+        if (data>node.getData()) return searchInt(node.getRight(), data);
+        else return searchInt(node.getLeft(), data);
+    }
 }
