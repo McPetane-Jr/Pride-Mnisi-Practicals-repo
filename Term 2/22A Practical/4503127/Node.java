@@ -1,36 +1,36 @@
-class Node<E> {
+class Node {
 
-    E data;
-    private Node<E> left;
-    private Node<E> right;
+    int data;
+    private Node left;
+    private Node right;
 
     //Loaded constr
-    public Node(E data) {
+    public Node(int data) {
         this.data = data;
         this.left = null;
         this.right = null;
     }
     
     //getters
-    public E getData() {
+    public int getData() {
         return data;
     }
 
-    public Node<E> getLeft() {
+    public Node getLeft() {
         return left;
     }
-    public Node<E> getRight(){
+    public Node getRight(){
         return right;
     }
 
     //setters
-    public void setData(E dataReplacement){
+    public void setData(int dataReplacement){
         this.data = dataReplacement;
     }
-    public void setLeft(Node<E> leftReplacement){
+    public void setLeft(Node leftReplacement){
         this.left = leftReplacement;
     }
-    public void setRight(Node<E> rightReplacement){
+    public void setRight(Node rightReplacement){
         this.right = rightReplacement;
     }
 }
